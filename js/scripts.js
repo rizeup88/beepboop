@@ -23,9 +23,9 @@ var checkInput = function(number) {
         outputArray.push(zero);
       } else {
         outputArray.push(i.toString());
-        }
       }
-      return outputArray;
+    }
+    return outputArray;
 	}
 }
 // User Interface Logic needed to return result on screen
@@ -33,6 +33,6 @@ $(document).ready(function(){
   $("form#entry").submit(function(event){
     event.preventDefault();
     var number = parseInt($("input#number").val());
-    $("#result").append("<p>[" + checkInput(number) + "]<p>").toggle();
+    $("#result").text("[" + checkInput(number) + "]").show();
   });
 });
